@@ -30,6 +30,8 @@ Já os **atuadores** manipulam as variáveis do ambiente, agindo como uma saída
 
 **Exemplo de sistema**
 
+```Explicar luz automática```
+
 - Um sensor de iluminação **mede** a iluminação do ambiente
 - Um LED acende, **manipulando** (ou mudando) a iluminação do ambiente   
 
@@ -124,9 +126,13 @@ print(entrada.read())
 ## Em qual pino conectar no ESP 32?
 
 Pinos que podem agir como analógicos: 0, 2, 4, 12, 13, 14, 15, 25, 26, 27, 32, 33, 34, 35, 36, 39
+
 Pinos DAC: 25 e 26
+
 PWN: Qualquer saída digital
+
 VCC
+
 GND
 
 ```Imagem de pinout```
@@ -135,12 +141,44 @@ GND
 
 ## Como usar novos sensores e atuadores?
 
-### 1. Como identificar um sensor/atuador específico?
+### 1. Como escolher e comprar um sensor/atuador específico?
+
+Em sites de compra de componentes eletrônicos, procure pela ação que você precisa que o componente tenha (por exemplo, sensor de iluminação ou LED azul). Existem vários componentes que podem fazer a mesma coisa, então leia sua descrição para ver qual se aplica melhor ao seu projeto. 
+
+Caso você tenha um sensor/atuador e não saiba qual é, em alguns casos, pode ter um nome escrito no componente.
+
+Alguns componentes podem ter uma versão **original**, que é apenas o sensor, ou versão com **módulo**, no qual há um pequeno circuito para facilitar ações como definir valores para funcionamento e conexão no seu circuito.
+
+Sugestões de sites de confiança:
+
+- [Baú da eletrônica](https://www.baudaeletronica.com.br/)
+- [Curto Circuito](https://curtocircuito.com.br/)
 
 ### 2. Como saber as informações desse sensor/atuador? (O que ele faz, como montar o circuito, especificações...)
 
+Todo componente eletrônico, como sensores e atuadores, possuem um documento chamado **datasheet**. 
+
+O datasheet reune dados do componentes, tais como:
+
+- Nome e descrição da funcionalidade do componente
+- Circuitos padrões ou exemplos de aplicações
+- Valores máximos e mínimos de trabalho
+- Outras informações técnicas que podem ser úteis sobre o uso do componente  
+
+Geralmente, baste procurar o nome do componente + datasheet em um buscador ou no site do fabricante! Caso as informações estejam técnicas demais, aproveite para **visitar outros sites e ver exemplos de circuitos** e aplicações utilizando este componente :)
+
+Também é interessante olhar no **site de onde você comprou o componente**, já que, normalmente, deixam uma breve descrição (que é um resumo do datasheet!)
+
 ### 3. Como programar esse sensor/atuador com MicroPython na ESP 32?
+
+Agora que você sabe qual componente tem em mão, como programá-lo? Usando a documentação!
+
+Caso tenha dúvidas sobre funções, módulos, protocolos e drivers do ESP32 com MicroPython, veja a [documentação do MicroPython para ESP32](https://docs.micropython.org/en/latest/esp32/quickref.html)  
+
+Caso não resolva seu problema, procure por guias onlines utilizando o mesmo sensor, vendo seu funcionamento e se é necessário módulos e protocolos diferentes também. [RandomNerdTutorials](https://randomnerdtutorials.com/projects-esp32-esp8266-micropython/) possuem guias de passo-a-passo de vários componentes no ESP32 com Micropython, mas fique à vontade para explorar outros :)
+
 
 ## Contribuições e Considerações Finais
 
+Caso você use algum sensor/atuador que não está aqui, fique à vontade para enviar um [Pull Request](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) no repositório para complementá-lo!
 
