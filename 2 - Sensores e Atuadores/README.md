@@ -1,6 +1,6 @@
 <p align="center">
   <img src="../logo.png" width="150" /><br/>
- :electric_plug: Introdução a microcontroladores com ESP32 <br/>
+ Introdução a microcontroladores com ESP32 <br/>
   <i>Owlficinas - Aula 2</i>
 </p>
 
