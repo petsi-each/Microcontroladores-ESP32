@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://ibb.co/wQ3jfFd" width="300" /><br/>
+  <img src="../logo.png" width="150" /><br/>
  :electric_plug: Introdução a microcontroladores com ESP32 <br/>
   <i>Owlficinas - Aula 2</i>
 </p>
