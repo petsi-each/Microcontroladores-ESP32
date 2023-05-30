@@ -1,4 +1,12 @@
-# :pushpin:  O que são sensores e atuadores?
+<p align="center">
+  <img src="https://ibb.co/wQ3jfFd" width="300" /><br/>
+ :electric_plug: Introdução a microcontroladores com ESP32 <br/>
+  <i>Owlficinas - Aula 2</i>
+</p>
+
+<br/>
+
+# :pushpin:  Sensores e atuadores
 
 Os sensores e atuadores são componentes eletrônicos e a forma do nosso sistema interagir com o ambiente e suas variáveis. 
 
