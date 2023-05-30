@@ -1,4 +1,4 @@
-# :pushpin:  O que são?
+# :pushpin:  O que são sensores e atuadores?
 
 Os sensores e atuadores são componentes eletrônicos e a forma do nosso sistema interagir com o ambiente e suas variáveis. 
 
@@ -39,7 +39,7 @@ Já os **atuadores** manipulam as variáveis do ambiente, agindo como uma saída
 
 Os sinais de entrada e saída podem ser definidos como **digitais** ou **analógicos**.
 
-## Sinal digital 
+# :pager: Sinal digital 
 
 O sinal **digital** pode assumir apenas dois valores no seu sinal, que podem ser interpretados como zero ou um.
 ****Exemplo:*** um sensor de luminosidade que devolve um 1 caso esteja claro e 0 caso não esteja*
@@ -63,14 +63,14 @@ entrada = machine.Pin(2, machine.Pin.IN)
 print(entrada.value())
 ```
 
-## Sinal analógico
+# :watch: Sinal analógico
 
 O sinal **analógico** pode assumir qualquer valor no seu sinal dentro de uma faixa de operação. 
 ****Exemplo:*** um sensor de luminosidade que devolve um valor para a luminosidade do local*
 
 Há algumas ***implementações gerais*** sinais analógicos no ESP32 com Micropython:
 
-### ADC (Analog to Digital Converter)
+## ADC (Analog to Digital Converter)
 
 Para ter valores analógicos no ESP32 como **entrada**, nós precisamos utilizar o ADC para converter esse sinais analógicos em digitais a fim de que sejam interpretados pelo controlador. 
 
@@ -86,7 +86,7 @@ entrada = machine.ADC(machine.Pin(12))
 print(entrada.read())
 ```
 
-### DAC (Digital to Analog Converter)
+## DAC (Digital to Analog Converter)
 
 Caso você queira ter valores analógicos como saída, é necessário utilizar o DAC. Ele converte os sinais digitais da placa em sinais analógicos na saída. 
 
@@ -103,7 +103,7 @@ saida.write(150)
 ```
 
 
-### PWM (Pulse With Modulation)
+## PWM (Pulse With Modulation)
 
 Outra forma é utilizar o PWM, que é uma forma de criar uma saída análoga artificial em um pino digital. Para fazer isso, o sinal do pino é mudado de 0 para 1 rapidamente, por isso, utiliza dois parâmetros: frequência e ciclo de trabalho. 
 
@@ -124,7 +124,7 @@ print(entrada.read())
 
 :warning: **Atenção!** Alguns sensores podem precisar de outros pinos específicos ou uma programação específica. As implementações aqui são exemplos gerais :)
 
-## Em qual pino conectar no ESP 32?
+# :round_pushpin: Em qual pino conectar no ESP 32?
 
 Pinos que podem agir como analógicos: 0, 2, 4, 12, 13, 14, 15, 25, 26, 27, 32, 33, 34, 35, 36, 39
 
@@ -140,9 +140,9 @@ GND
 
 :warning: **Atenção!** Alguns pinos podem apresentar comportamento inesperado. Para saber mais sobre, [veja aqui](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/) :)
 
-## Como usar novos sensores e atuadores?
+# :star_struck: Como usar novos sensores e atuadores?
 
-### 1. Como escolher e comprar um sensor/atuador específico?
+## 1. Como escolher e comprar um sensor/atuador específico?
 
 Em sites de compra de componentes eletrônicos, procure pela ação que você precisa que o componente tenha (por exemplo, sensor de iluminação ou LED azul). Existem vários componentes que podem fazer a mesma coisa, então leia sua descrição para ver qual se aplica melhor ao seu projeto. 
 
@@ -155,7 +155,7 @@ Sugestões de sites de confiança:
 - [Baú da eletrônica](https://www.baudaeletronica.com.br/)
 - [Curto Circuito](https://curtocircuito.com.br/)
 
-### 2. Como saber as informações desse sensor/atuador? (O que ele faz, como montar o circuito, especificações...)
+## 2. Como saber as informações desse sensor/atuador? (O que ele faz, como montar o circuito, especificações...)
 
 Todo componente eletrônico, como sensores e atuadores, possuem um documento chamado **datasheet**. 
 
@@ -170,7 +170,7 @@ Geralmente, baste procurar o nome do componente + datasheet em um buscador ou no
 
 Também é interessante olhar no **site de onde você comprou o componente**, já que, normalmente, deixam uma breve descrição (que é um resumo do datasheet!)
 
-### 3. Como programar esse sensor/atuador com MicroPython na ESP 32?
+## 3. Como programar esse sensor/atuador com MicroPython na ESP 32?
 
 Agora que você sabe qual componente tem em mão, como programá-lo? Usando a documentação!
 
@@ -179,7 +179,7 @@ Caso tenha dúvidas sobre funções, módulos, protocolos e drivers do ESP32 com
 Caso não resolva seu problema, procure por guias onlines utilizando o mesmo sensor, vendo seu funcionamento e se é necessário módulos e protocolos diferentes também. [RandomNerdTutorials](https://randomnerdtutorials.com/projects-esp32-esp8266-micropython/) possuem guias de passo-a-passo de vários componentes no ESP32 com Micropython, mas fique à vontade para explorar outros :)
 
 
-## Exemplos
+# :woman_technologist: Mão na massa
 
 Explore os subdiretórios deste repositório para ver exemplos simples de circuitos e códigos para diferentes sensores e atuadores:
 
@@ -199,7 +199,7 @@ Explore os subdiretórios deste repositório para ver exemplos simples de circui
 - Display OLED
 
 
-## Contribuições
+# :busts_in_silhouette: Contribuições
 
 Caso você use algum sensor/atuador que não está aqui, fique à vontade para enviar um [Pull Request](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) no repositório para complementá-lo!
 
