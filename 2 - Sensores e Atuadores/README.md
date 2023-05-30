@@ -43,7 +43,7 @@ Os sinais de entrada e saída podem ser definidos em **digital** ou **analógico
 O sinal **digital** pode assumir apenas dois valores no seu sinal, que podem ser interpretados como zero ou um.
 ****Exemplo:*** um sensor de luminosidade que devolve um 1 caso esteja claro e 0 caso não esteja*
 
-***Implementação:***
+***Implementação geral:***
 
 ```python
 import machine
@@ -65,7 +65,7 @@ print(entrada.value())
 O sinal **analógico** pode assumir qualquer valor no seu sinal dentro de uma faixa de operação. 
 ****Exemplo:*** um sensor de luminosidade que devolve um valor para a luminosidade do local*
 
-Há algumas ***implementações*** sinais analógicos no ESP32 com Micropython:
+Há algumas ***implementações gerais*** sinais analógicos no ESP32 com Micropython:
 
 ### ADC (Analog to Digital Converter)
 
@@ -116,12 +116,22 @@ saida = machine.PWM(machine.Pin(0), freq=5000, duty_u16=32768)
 # Ler e printar o valor analógico do pino de entrada
 print(entrada.read())
 ```
-// Adicionar demonstração de mudar esses parâmetros
+
+```Aqui colocar uma animaçãozinha mudando os parâmetros```
+
+:warning: **Atenção!** Alguns sensores podem precisar de outros pinos específicos ou uma programação específica. As implementações aqui são exemplos gerais :)
 
 ## Em qual pino conectar no ESP 32?
 
 Pinos que podem agir como analógicos: 0, 2, 4, 12, 13, 14, 15, 25, 26, 27, 32, 33, 34, 35, 36, 39
+Pinos DAC: 25 e 26
+PWN: Qualquer saída digital
+VCC
+GND
 
+```Imagem de pinout```
+
+:warning: **Atenção!** Alguns pinos podem apresentar comportamento inesperado. Para saber mais sobre, [veja aqui](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/) :)
 
 ## Como usar novos sensores e atuadores?
 
@@ -133,5 +143,4 @@ Pinos que podem agir como analógicos: 0, 2, 4, 12, 13, 14, 15, 25, 26, 27, 32, 
 
 ## Contribuições e Considerações Finais
 
-Espero que tenha sido útil
-Eba, se aprendeu um novo, adiciona aqui pra gente se ajudar
+
