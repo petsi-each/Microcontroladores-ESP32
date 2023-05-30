@@ -102,6 +102,8 @@ saida = machine.DAC(machine.Pin(25))
 saida.write(150)
 ```
 
+<br/>
+
 
 ## PWM (Pulse With Modulation)
 
@@ -124,21 +126,23 @@ print(entrada.read())
 
 :warning: **Atenção!** Alguns sensores podem precisar de outros pinos específicos ou uma programação específica. As implementações aqui são exemplos gerais :)
 
+<br/>
+
 # :round_pushpin: Em qual pino conectar no ESP 32?
 
-Pinos que podem agir como analógicos: 0, 2, 4, 12, 13, 14, 15, 25, 26, 27, 32, 33, 34, 35, 36, 39
+- Pinos nos quais é possível usar ADC: 0, 2, 4, 12, 13, 14, 15, 25, 26, 27, 32, 33, 34, 35, 36, 39
+- Pinos nos quais é possível usar DAC: 25 e 26
+- Pinos nos quais é possível usar PWN: Qualquer saída digital
 
-Pinos DAC: 25 e 26
+*P.S.: 34, 35, 36 e 39 apenas recebem entrada*
 
-PWN: Qualquer saída digital
-
-VCC
-
-GND
+VCC e GND vocês conheceram na aula 1 :)
 
 ```Imagem de pinout```
 
 :warning: **Atenção!** Alguns pinos podem apresentar comportamento inesperado. Para saber mais sobre, [veja aqui](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/) :)
+
+<br/>
 
 # :star_struck: Como usar novos sensores e atuadores?
 
@@ -178,6 +182,7 @@ Caso tenha dúvidas sobre funções, módulos, protocolos e drivers do ESP32 com
 
 Caso não resolva seu problema, procure por guias onlines utilizando o mesmo sensor, vendo seu funcionamento e se é necessário módulos e protocolos diferentes também. [RandomNerdTutorials](https://randomnerdtutorials.com/projects-esp32-esp8266-micropython/) possuem guias de passo-a-passo de vários componentes no ESP32 com Micropython, mas fique à vontade para explorar outros :)
 
+<br/>
 
 # :woman_technologist: Mão na massa
 
@@ -198,6 +203,7 @@ Explore os subdiretórios deste repositório para ver exemplos simples de circui
 - Buzzer
 - Display OLED
 
+<br/>
 
 # :busts_in_silhouette: Contribuições
 
