@@ -1,6 +1,6 @@
-# 2 - Sensores e Atuadores
+# :pushpin:  O que são?
 
-São a forma do nosso sistema interagir com o ambiente e suas variáveis. 
+Os sensores e atuadores são componentes eletrônicos e a forma do nosso sistema interagir com o ambiente e suas variáveis. 
 
 ```Aqui colocar aquele fluxograma```
 
@@ -37,10 +37,9 @@ Já os **atuadores** manipulam as variáveis do ambiente, agindo como uma saída
 
 ```Aqui colocar uma animaçãozinha se eu conseguir```
 
+Os sinais de entrada e saída podem ser definidos como **digitais** ou **analógicos**.
 
-## Sinal digital ou analógico
-
-Os sinais de entrada e saída podem ser definidos em **digital** ou **analógico**.
+## Sinal digital 
 
 O sinal **digital** pode assumir apenas dois valores no seu sinal, que podem ser interpretados como zero ou um.
 ****Exemplo:*** um sensor de luminosidade que devolve um 1 caso esteja claro e 0 caso não esteja*
@@ -63,6 +62,8 @@ entrada = machine.Pin(2, machine.Pin.IN)
 # Ler e printar o valor do pino de entrada
 print(entrada.value())
 ```
+
+## Sinal analógico
 
 O sinal **analógico** pode assumir qualquer valor no seu sinal dentro de uma faixa de operação. 
 ****Exemplo:*** um sensor de luminosidade que devolve um valor para a luminosidade do local*
@@ -178,7 +179,27 @@ Caso tenha dúvidas sobre funções, módulos, protocolos e drivers do ESP32 com
 Caso não resolva seu problema, procure por guias onlines utilizando o mesmo sensor, vendo seu funcionamento e se é necessário módulos e protocolos diferentes também. [RandomNerdTutorials](https://randomnerdtutorials.com/projects-esp32-esp8266-micropython/) possuem guias de passo-a-passo de vários componentes no ESP32 com Micropython, mas fique à vontade para explorar outros :)
 
 
-## Contribuições e Considerações Finais
+## Exemplos
+
+Explore os subdiretórios deste repositório para ver exemplos simples de circuitos e códigos para diferentes sensores e atuadores:
+
+**Sensores**
+
+- [LDR (Luminosidade)](./LDR)
+- Umidade do solo
+- Touch
+- LM 35 (Temperatura)
+
+**Atuadores**
+
+- Servomotor
+- LED RGB
+- [LED](./LED)
+- Buzzer
+- Display OLED
+
+
+## Contribuições
 
 Caso você use algum sensor/atuador que não está aqui, fique à vontade para enviar um [Pull Request](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) no repositório para complementá-lo!
 
