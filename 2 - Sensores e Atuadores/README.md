@@ -39,6 +39,8 @@ Já os **atuadores** manipulam as variáveis do ambiente, agindo como uma saída
 
 Os sinais de entrada e saída podem ser definidos como **digitais** ou **analógicos**.
 
+<br/>
+
 # :pager: Sinal digital 
 
 O sinal **digital** pode assumir apenas dois valores no seu sinal, que podem ser interpretados como zero ou um.
@@ -62,6 +64,8 @@ entrada = machine.Pin(2, machine.Pin.IN)
 # Ler e printar o valor do pino de entrada
 print(entrada.value())
 ```
+
+<br/>
 
 # :watch: Sinal analógico
 
@@ -101,9 +105,6 @@ saida = machine.DAC(machine.Pin(25))
 # Mudar o valor de sinal do pino (entre 0 e 255)
 saida.write(150)
 ```
-
-<br/>
-
 
 ## PWM (Pulse With Modulation)
 
