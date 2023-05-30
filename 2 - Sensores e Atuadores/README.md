@@ -1,9 +1,31 @@
 # 2 - Sensores e Atuadores
-São a forma do nosso sistema interagir com o ambiente. 
 
-Os **sensores** são componentes que medem variáveis do ambiente, entregando-o como entrada para o controlador. Já os **atuadores** manipulam as variáveis do ambiente, agindo como uma saída pro controlador.
+São a forma do nosso sistema interagir com o ambiente e suas variáveis. 
 
-Os transdutores transformam uma grandeza física em um sinal elétrico que pode ser  interpretado por um sistema de controle.
+Os **sensores** são componentes que medem variáveis do ambiente  e convertem essa informação em sinais elétricos, utilizando um transdutor interno, para usar como entrada no controlador. 
+
+**Exemplos de sensores:**
+| **Nome do sensor** | **O que é medido** |
+|:------------------:|:------------------:|
+|   LDR 3mm 3547-2   |    Iluminosidade   |
+|        LM35        |     Temperatura    |
+|       TTP223B      |        Touch       |
+|      TCRT5000      |    Infravermelho   |
+
+
+Já os **atuadores** manipulam as variáveis do ambiente, agindo como uma saída pro controlador. Ou seja, eles transformam os sinais elétricos em outros tipos de energia para criar alguma ação no ambiente.
+
+**Exemplos de atuadores**
+
+| **Nome do atuador** |          **O que é feito**         |
+|:-------------------:|:----------------------------------:|
+|     Servo motor     |            Movimentação            |
+|       LED RGB       | Emissão de luz de diferentes cores |
+|         LED         |           Emissão de luz           |
+|     Display OLED    | Emissão de luz em pixels numa tela |
+|        Buzzer       |           Emissão de som           |
+
+
 
 *Exemplo:*
 
@@ -12,7 +34,6 @@ Os transdutores transformam uma grandeza física em um sinal elétrico que pode 
 
 ```Aqui colocar aquele fluxograma```
 
-```Falar da energia q se transforma em sinal digital ou analógico```
 
 ## Sinal digital ou analógico
 
@@ -35,7 +56,7 @@ Pinos que podem agir como analógicos: 0, 2, 4, 12, 13, 14, 15, 25, 26, 27, 32, 
 
 ### 3. Como programar esse sensor/atuador com MicroPython na ESP 32?
 
-## Considerações finais e contribuições
+## Contribuições e Considerações Finais
 
 Espero que tenha sido útil
 Eba, se aprendeu um novo, adiciona aqui pra gente se ajudar
