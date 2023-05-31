@@ -114,7 +114,7 @@ saida = machine.DAC(machine.Pin(25))
 saida.write(150)
 ```
 
-## PWM (Pulse With Modulation)
+## PWM (Pulse Width Modulation)
 
 Outra forma é utilizar o PWM, que é uma forma de criar uma saída análoga artificial em um pino digital. Para fazer isso, o sinal do pino é mudado de 0 para 1 rapidamente, por isso, utiliza dois parâmetros: frequência e ciclo de trabalho. 
 
