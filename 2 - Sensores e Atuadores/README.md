@@ -4,13 +4,17 @@
   <i>Owlficinas - Aula 2</i>
 </p>
 
+
 <br/>
 
 # :pushpin:  Sensores e atuadores
 
 Os sensores e atuadores são componentes eletrônicos e a forma do nosso sistema interagir com o ambiente e suas variáveis. 
 
-```Aqui colocar aquele fluxograma```
+<p  align="center">
+<img  src="fluxograma.png"  width="450"  />
+</p>
+
 
 Os **sensores** são componentes que medem variáveis do ambiente  e convertem essa informação em sinais elétricos, utilizando um transdutor interno, para usar como entrada no controlador. 
 
@@ -38,12 +42,12 @@ Já os **atuadores** manipulam as variáveis do ambiente, agindo como uma saída
 
 **Exemplo de sistema**
 
-```Explicar luz automática```
+- Um sensor de movimento **mede** se há um movimento no ambiente
+- Caso haja, um LED acende, **manipulando** (ou mudando) a iluminação do ambiente   
 
-- Um sensor de iluminação **mede** a iluminação do ambiente
-- Um LED acende, **manipulando** (ou mudando) a iluminação do ambiente   
-
-```Aqui colocar uma animaçãozinha se eu conseguir```
+<p  align="center">
+<img  src="animation.gif"  width="450"  />
+</p>
 
 Os sinais de entrada e saída podem ser definidos como **digitais** ou **analógicos**.
 
@@ -131,7 +135,9 @@ saida = machine.PWM(machine.Pin(0), freq=5000, duty_u16=32768)
 print(entrada.read())
 ```
 
-```Aqui colocar uma animaçãozinha mudando os parâmetros```
+<p  align="center">
+<img  src="https://exploreembedded.com/wiki/images/5/54/0_LPC1768_PWM.gif"  width="450"  />
+</p>
 
 :warning: **Atenção!** Alguns sensores podem precisar de outros pinos específicos ou uma programação específica. As implementações aqui são exemplos gerais :)
 
@@ -147,9 +153,20 @@ print(entrada.read())
 
 VCC e GND vocês conheceram na aula 1 :)
 
-```Imagem de pinout```
+<p  align="center">
+<img  src="https://lastminuteengineers.b-cdn.net/wp-content/uploads/iot/ESP32-Pinout.png"  width="450"  />
+</p>
 
-:warning: **Atenção!** Alguns pinos podem apresentar comportamento inesperado. Para saber mais sobre, [veja aqui](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/) :)
+
+:warning: **Atenção!** Alguns pinos podem apresentar comportamento inesperado. 
+
+Os pinos verdes são seguros para uso. Os amarelos podem apresentar comportamento imprevisível e é recomendado evitar os vermelhos
+
+<p  align="center">
+<img  src="https://lastminuteengineers.b-cdn.net/wp-content/uploads/iot/ESP32-GPIO-Pins-that-are-Safe-to-Use.png"  width="300"  />
+</p>
+
+Para saber mais sobre, [veja aqui](https://lastminuteengineers.com/esp32-pinout-reference/) :)
 
 <br/>
 
