@@ -218,7 +218,7 @@ Explore os subdiretórios deste repositório para ver exemplos simples de circui
 
 - [LDR (Luminosidade)](./LDR)
 - Umidade do solo
-- Touch
+- [TTP223B (Toque)](./TTP223B/)
 - LM 35 (Temperatura)
 
 **Atuadores**
