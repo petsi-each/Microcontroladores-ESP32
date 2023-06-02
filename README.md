@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="../logo.png" width="150" /><br/>
- <h2>Introdução a microcontroladores com ESP32</h2> <br/>
+  <img src="logo.png" width="150" /><br/>
+ Introdução a microcontroladores com ESP32 <br/>
   <i>Owlficinas, PET-SI</i>
 </p>
 
