@@ -41,8 +41,6 @@ Não precisa colocar muitas informações técnicas aqui, só deixe sua ideia cl
 | Sensores de temperatura | 4 |
 
 
-<br/>
-
 ### Funcionamento dos sensores e atuadores
 
 #### Sensor de temperatura DS18B20 tipo TO92
