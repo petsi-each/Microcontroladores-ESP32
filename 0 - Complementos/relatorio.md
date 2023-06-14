@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="https://ibb.co/wQ3jfFd" width="300" /><br/>
+  <img src="https://media.elektor.com/media/catalog/product/cache/9cc822bfc6a57f9729d464b8b5e0e0df/j/o/joy-it-nodemcu-esp32-development-board_front.png" width="300" /><br/>
 Nome do projeto <br/>
 </p>
 
@@ -12,6 +12,9 @@ Nome do projeto <br/>
 
 O que é o seu projeto? Qual o objetivo do sistema?
 Não precisa colocar muitas informações técnicas aqui, só deixe sua ideia clara :)
+
+
+<br/>
 
 ## :robot: Montagem do dispositivo físico
 
@@ -38,6 +41,8 @@ Não precisa colocar muitas informações técnicas aqui, só deixe sua ideia cl
 | Sensores de temperatura | 4 |
 
 
+<br/>
+
 ### Funcionamento dos sensores e atuadores
 
 #### Sensor de temperatura DS18B20 tipo TO92
@@ -59,7 +64,6 @@ Este sensor posui precisão de mais ou menos 0,5°C na faixa de medição de -10
 
 O sensor digital de toque TTP223B é de simples funcionamento, mudando o sinal quando há um toque. Sua tensão de operação é entre 2-5, 5V; a saída de estado alto é 0,8V e baixo de 0,3 V. O tempo de resposta é de 220 ms (em estado baixo) e 60 ms (em estado alto), contando com as dimensões de 24 x 24 x 7,2 mm (Especificação técnica: https://files.seeedstudio.com/wiki/Grove-Touch_Sensor/res/TTP223.pdf)
 
-<br/>
 
 ### Circuito
 
@@ -70,6 +74,7 @@ Figura - Diagrama do circuito<br/>
 Informações importantes sobre o circuito, onde colocá-lo, entre outros.
 <br/>
 
+<br/>
 
 ## :electric_plug: Funcionamento do sistema
 
@@ -81,6 +86,8 @@ Liste informações como:
 - qual o objetivo de cada arquivo/pedaço de código
 Não precisa ser muito detalhado, apenas o suficiente para que seu código seja entendível!
 
+
+<br/>
 
 ## :busts_in_silhouette: Contribuir no projeto
 
