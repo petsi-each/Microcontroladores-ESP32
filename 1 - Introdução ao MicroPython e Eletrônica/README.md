@@ -6,7 +6,7 @@ Em construção - enquanto isso, veja o .pdf :)
 <p  align="center">
 <img  src="../logo.png"  width="150"  /><br/>
 Introdução a microcontroladores com ESP32 <br/>
-<i>Owlficinas - Aula 2</i>
+<i>Owlficinas - Aula 1</i>
 </p>
 
 <br/>  
