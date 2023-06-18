@@ -293,7 +293,7 @@ Crie um sistema que, quando você aperta o sensor touch, o LED acende.
 
 <br/>
 
-# :books: Gabarito
+# :open_book: Gabarito
 
 ## Desafio 1
 
