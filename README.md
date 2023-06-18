@@ -18,8 +18,8 @@ Ao finalizar o curso, você:
 
 # Conteúdo
 
-- [Aula 0 - Introdução ao curso e conteúdo extra](./0 - Complementos)
-- [Aula 1 - Introdução à eletrônica e MicroPython](./1 - Introdução ao MicroPython e Eletrônica)
+- [Aula 0 - Introdução ao curso e conteúdo extra](./0%20-%20Complementos)
+- [Aula 1 - Introdução à eletrônica e MicroPython](./1%20-%20Introdução%20ao%20MicroPython%20e%20Eletrônica)
 - [Aula 2 - Sensores e Atuadores](./2%20-%20Sensores%20e%20Atuadores/)
 - Aula 3 - Conexão e Servidores
 - Aula 4 - Projetos
