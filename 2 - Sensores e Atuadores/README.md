@@ -124,6 +124,11 @@ Outra forma é utilizar o PWM, que é uma forma de criar uma saída análoga art
 
 Pode ser usado em qualquer saída analógica.
 
+Para utilizá-la, você precisa de dois valores como parâmetros:
+
+- **Frequência**: Pode ser um valor entre 0 e 78125. A frequência de 5000 Hz geralmente é a mais comum e pode ser usada para controlar o brilho de um LED.
+- **Ciclo de trabalho**: É um valor entre 0 e 1023, no qual 1023 corresponde a 100% do ciclo de trabalho (1 - ligado) e 0 corresponde a 0% do ciclo de trabalho (0 - desligado)
+
 ```python
 import machine
 
@@ -131,8 +136,8 @@ import machine
 # O primeiro parâmetro é o Pin, o segundo é a frequência e o terceiro é o ciclo de trabalho
 saida = machine.PWM(machine.Pin(0), freq=5000, duty_u16=32768)
 
-# Ler e printar o valor analógico do pino de entrada
-print(entrada.read())
+# Mudar o valor do ciclo de trabalho
+saida.duty(valor)
 ```
 
 <p  align="center">
