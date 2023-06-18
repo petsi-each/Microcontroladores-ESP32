@@ -64,6 +64,8 @@ Aperte o botão "EN" para deixar a plaquinha no modo programável ou a resetar. 
 
 Serve para deixar a placa no modo bootavel para adicionar firmware.
 
+<br/>
+
 # :desktop_computer: Programação em MicroPython
 
 O **MicroPython** é uma versão otimizada do Python3, utilizada para microcontroladores e ambientes com poucos recursos.
@@ -203,7 +205,7 @@ Link de tutorial para instalação: https://randomnerdtutorials.com/getting-star
 
 ### Enviar arquivos
 
-<br>
+<br/>
 
 # :robot: Eletrônica básica
 
@@ -271,7 +273,7 @@ Possuem diferentes valores definidos por uma tabela de cores. É necessário cal
 
 `Foto da tabela`
 
-<br>
+<br/>
 
 # :books: Desafios
 
@@ -288,6 +290,8 @@ Crie um circuito com um led e crie o programa para fazer o blink funcionar
 ## Desafio 3
 
 Crie um sistema que, quando você aperta o sensor touch, o LED acende.
+
+<br/>
 
 # :books: Gabarito
 
