@@ -229,7 +229,7 @@ Explore os subdiretórios deste repositório para ver exemplos simples de circui
 
 **Atuadores**
 
-- Servomotor
+- [Servomotor](./Servo_MotorSg90/)
 - [LED RGB](./LED_RGB)
 - [LED](./LED)
 - [Buzzer](./Buzzer)
