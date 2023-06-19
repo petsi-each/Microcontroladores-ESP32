@@ -8,5 +8,5 @@ while True:
     if presenca.value():
         print('Tem movimento')
     else:
-        print('Não tem gente')
+        print('Não tem movimento')
 
