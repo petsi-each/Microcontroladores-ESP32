@@ -222,7 +222,7 @@ Explore os subdiretórios deste repositório para ver exemplos simples de circui
 **Sensores**
 
 - [LDR (Luminosidade)](./LDR)
-- Umidade do solo
+- [DHT22 (Umidade do solo)](./DHT22)
 - [TTP223B (Toque)](./TTP223B/)
 - LM 35 (Temperatura)
 - [HC-SR501 (Presença)](./Pir_Hc-sr501)
