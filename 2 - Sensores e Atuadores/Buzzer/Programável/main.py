@@ -5,9 +5,10 @@ from time import sleep_ms
 
 buzzerPin = 15
 delay = 150
-duty = 512
+duty = 216
 
-buzzer = machine.PWM(machine.Pin(buzzerPin, machine.Pin.OUT), freq=440, duty=0)
+
+buzzer = machine.PWM(machine.Pin(buzzerPin))
 
 # Notas Musicais
 E6  = 1319
@@ -24,25 +25,29 @@ A7  = 3520
 
 # Melodia do Mario
 mario = [
-     E7, E7,  1, E7,  1, C7, E7,  1,
-     G7,  1,  1,  1, G6,  1,  1,  1,
-     C7,  1,  1, G6,  1,  1, E6,  1,
-      1, A6,  1, B6,  1,AS6, A6,  1,
-     G6, E7,  1, G7, A7,  1, F7, G7,
-      1, E7,  1, C7, D7, B6,  1,  1,
-     C7,  1,  1, G6,  1,  1, E6,  1,
-      1, A6,  1, B6,  1,AS6, A6,  1,
-     G6, E7,  1, G7, A7,  1, F7, G7,
-      1, E7,  1, C7, D7, B6,  1,  1,
+     E7, E7,  0, E7,  0, C7, E7,  0,
+     G7,  0,  0,  0, G6,  0,  0,  0,
+     C7,  0,  0, G6,  0,  0, E6,  0,
+      0, A6,  0, B6,  0,AS6, A6,  0,
+     G6, E7,  0, G7, A7,  0, F7, G7,
+      0, E7,  0, C7, D7, B6,  0,  0,
+     C7,  0,  0, G6,  0,  0, E6,  0,
+      0, A6,  0, B6,  0,AS6, A6,  0,
+     G6, E7,  0, G7, A7,  0, F7, G7,
+      0, E7,  0, C7, D7, B6,  0,  0,
     ]
 
-
-print("Playing Mario!")
-for note in mario:
-    buzzer.freq(note)
-    buzzer.duty(duty)
-    sleep_ms(delay)
-sleep_ms(delay*10)
-buzzer.deinit()
+while True:
+    buzzer.init(freq=440, duty=0)
+    print("Playing Mario!")
+    for note in mario:
+        if note == 0:
+            buzzer.duty(0)
+        else:
+            buzzer.duty(duty)
+            buzzer.freq(note)
+        sleep_ms(delay)
+    sleep_ms(delay*10)
+    buzzer.deinit()
 
 
