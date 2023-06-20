@@ -225,13 +225,14 @@ Explore os subdiretórios deste repositório para ver exemplos simples de circui
 - Umidade do solo
 - [TTP223B (Toque)](./TTP223B/)
 - LM 35 (Temperatura)
+- [HC-SR501 (Presença)](./Pir_Hc-sr501)
 
 **Atuadores**
 
-- Servomotor
-- LED RGB
+- [Servomotor](./Servo_MotorSg90/)
+- [LED RGB](./LED_RGB)
 - [LED](./LED)
-- Buzzer
+- [Buzzer](./Buzzer)
 - Display OLED
 
 <br/>
