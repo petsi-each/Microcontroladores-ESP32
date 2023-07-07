@@ -1,243 +1,112 @@
 <p align="center">
   <img src="../logo.png" width="150" /><br/>
  Introdução a microcontroladores com ESP32 <br/>
-  <i>Owlficinas - Aula 2</i>
+  <i>Owlficinas - Aula 3</i>
 </p>
 
 
 <br/>
 
-# :pushpin:  Sensores e atuadores
+# :pushpin:  Conexões e Servidores
 
-Os sensores e atuadores são componentes eletrônicos e a forma do nosso sistema interagir com o ambiente e suas variáveis. 
+Conexões e servidores pemitem acessos remotos, com isso podemos controlar a execução de procedimentos armazenados de servidores.
 
 <p  align="center">
-<img  src="fluxograma.png"  width="450"  />
+<img  src="conexoeseservidores.png"  width="450"  />
 </p>
 
+<h1>💻Servidores</h1>
 
-Os **sensores** são componentes que medem variáveis do ambiente  e convertem essa informação em sinais elétricos, utilizando um transdutor interno, para usar como entrada no controlador. 
+Os **servidores** são provedores de recursos responsáveis por:
+- Rodar códigos
+- Prove serviços e respostas ao cliente 
+- Armazena dados e interfaces que podem ser acessadas
 
-**Exemplos de sensores:**
-| **Nome do sensor** | **O que é medido** |
-|:------------------:|:------------------:|
-|   LDR 3mm 3547-2   |    Iluminosidade   |
-|        LM35        |     Temperatura    |
-|       TTP223B      |        Touch       |
-|      TCRT5000      |    Infravermelho   |
+**Tipos de servidores:**
+Servidor de arquivos: É um servidor dedicado para armazenar e compartilhar arquivos em uma rede. É comumente usado em empresas para centralizar o armazenamento de documentos, imagens, vídeos e outros tipos de arquivos, permitindo o acesso e compartilhamento entre os usuários.
+
+ - **Servidor web**: É responsável por hospedar sites e aplicativos web. Ele recebe as solicitações dos clientes (navegadores) e fornece as páginas web correspondentes. Aplicações populares que utilizam servidores web são sites de comércio eletrônico, redes sociais, blogs e serviços de streaming de mídia.
+
+ - **Servidor de banco de dados**: É um servidor que gerencia o armazenamento e a recuperação de dados em um sistema de gerenciamento de banco de dados (SGBD). É amplamente utilizado em aplicações empresariais, como sistemas de gerenciamento de recursos humanos, sistemas de reservas e sistemas de CRM (Customer Relationship Management).
+
+ - **Servidor de e-mail**: É responsável pelo envio, recebimento e armazenamento de e-mails. Os servidores de e-mail permitem que os usuários enviem e recebam mensagens eletrônicas através de protocolos como SMTP (Simple Mail Transfer Protocol) e IMAP (Internet Message Access Protocol). Exemplos populares de aplicativos de e-mail que usam servidores de e-mail são o Gmail, o Outlook e o Thunderbird.
+
+ - **Servidor de aplicativos**: É utilizado para hospedar e executar aplicativos empresariais e web. Esses servidores fornecem o ambiente necessário para a execução de aplicativos de negócios, como sistemas de gestão empresarial (ERP), sistemas de gerenciamento de relacionamento com o cliente (CRM) e sistemas de comércio eletrônico.
+
+ - **Servidor de jogos**: É dedicado a hospedar jogos online, permitindo que vários jogadores se conectem e interajam em um ambiente virtual compartilhado. Esses servidores suportam a comunicação em tempo real entre os jogadores e gerenciam aspectos como autenticação, persistência do estado do jogo e coordenação de eventos.
+
+ - **Servidor de streaming de mídia**: É usado para fornecer conteúdo de áudio e vídeo em tempo real pela internet. Serviços de streaming como Netflix, Spotify e YouTube utilizam servidores de streaming de mídia para entregar conteúdo aos usuários, permitindo que eles assistam filmes, ouçam músicas e assistam a vídeos online.
+
+<h1>🧑Clientes</h1>
+São responsáveis por consumir recursos do servidor. Em resumo, o cliente em uma arquitetura cliente-servidor é responsável por enviar solicitações de serviços ou recursos ao servidor, aguardar e processar as respostas.
+
+Responsabilidades do cliente incluem:
+
+- **Iniciar uma solicitação**: O cliente inicia a interação com o servidor enviando uma solicitação para obter um serviço específico ou acessar recursos disponíveis no servidor. Essas solicitações podem ser feitas por meio de protocolos de comunicação como HTTP, FTP, SMTP, entre outros.
+
+- **Aguardar a resposta**: Após enviar a solicitação, o cliente aguarda a resposta do servidor. Durante esse tempo, o cliente pode exibir uma mensagem de espera ou fornecer feedback visual para informar aos usuários que a solicitação está sendo processada.
+
+- **Receber e processar a resposta**: Assim que o servidor processa a solicitação, ele envia uma resposta de volta ao cliente. O cliente é responsável por receber essa resposta e processá-la adequadamente, extraindo as informações relevantes para serem apresentadas aos usuários finais.
+
+- **Apresentar os resultados**: O cliente exibe os resultados da resposta aos usuários finais de forma adequada. Isso pode incluir a renderização de uma página web, a exibição de dados em um aplicativo ou a reprodução de conteúdo multimídia, dependendo da natureza do serviço solicitado.
+
+- *Gerenciar a interação com o usuário**: O cliente também pode fornecer interfaces de usuário intuitivas e interativas para facilitar a interação com os usuários finais. Isso pode envolver a coleta de entrada do usuário, a exibição de menus, formulários ou outros elementos de interface, dependendo das necessidades da aplicação.
 
 
-Já os **atuadores** manipulam as variáveis do ambiente, agindo como uma saída pro controlador. Ou seja, eles transformam os sinais elétricos em outros tipos de energia para criar alguma ação no ambiente.
+<h1>🌐Arquitetura cliente-servidor</h1>
 
-**Exemplos de atuadores**
-| **Nome do atuador** |          **O que é feito**         |
-|:-------------------:|:----------------------------------:|
-|     Servo motor     |            Movimentação            |
-|       LED RGB       | Emissão de luz de diferentes cores |
-|         LED         |           Emissão de luz           |
-|     Display OLED    | Emissão de luz em pixels numa tela |
-|        Buzzer       |           Emissão de som           |
+Como será que um cliente se comunica com um servidor ?
 
+> É uma arquitetura de rede que consiste em um servidor rodando código, geralmente contendo as regras de negócio da aplicação, no qual múltiplos clientes poderão se conectar para consumir os dados oferecidos pelo servidor. Geralmente o cliente solicita, quando necessitar, algum recurso do servidor, este que fica o tempo todo esperando por requisições de clientes e, assim que as recebe, processa e devolve uma resposta ao cliente.
 
-
-**Exemplo de sistema**
-
-- Um sensor de movimento **mede** se há um movimento no ambiente
-- Caso haja, um LED acende, **manipulando** (ou mudando) a iluminação do ambiente   
+Na arquitetura cliente-servidor, a comunicação entre o cliente e o servidor ocorre através de uma rede, utilizando protocolos de comunicação como HTTP, FTP, TCP/IP, entre outros. Essa arquitetura permite uma distribuição clara de responsabilidades, em que o cliente é responsável por solicitar serviços e o servidor é responsável por fornecer esses serviços de forma eficiente e confiável.
 
 <p  align="center">
-<img  src="animation.gif"  width="450"  />
+<img  src="clienteservidor.png"  width="450"  />
 </p>
 
-Os sinais de entrada e saída podem ser definidos como **digitais** ou **analógicos**.
+A arquitetura cliente-servidor é amplamente adotada em uma variedade de sistemas, desde aplicações web e serviços em nuvem até redes corporativas e sistemas distribuídos. Ela oferece uma abordagem escalável, onde múltiplos clientes podem se conectar a um único servidor ou a vários servidores, permitindo o compartilhamento de recursos e a distribuição da carga de trabalho.
 
-<br/>
+<h1>Protocolos de transpote</h1>
 
-# :pager: Sinal digital 
-
-O sinal **digital** pode assumir apenas dois valores no seu sinal, que podem ser interpretados como zero ou um.
-****Exemplo:*** um sensor de luminosidade que devolve um 1 caso esteja claro e 0 caso não esteja*
-
-***Implementação geral:***
-
-```python
-import machine
-
-# Criando um pin de saída no pino #0
-saida = machine.Pin(0, machine.Pin.OUT)
-
-# Mudando o valor
-saida.value(0) # Você também pode usar p0.on()
-saida.value(1) # Você também pode usar p0.off()
-
-# Criando um pin de entrada no pino #2
-entrada = machine.Pin(2, machine.Pin.IN)
-
-# Ler e printar o valor do pino de entrada
-print(entrada.value())
-```
-
-<br/>
-
-# :watch: Sinal analógico
-
-O sinal **analógico** pode assumir qualquer valor no seu sinal dentro de uma faixa de operação. 
-****Exemplo:*** um sensor de luminosidade que devolve um valor para a luminosidade do local*
-
-Há algumas ***implementações gerais*** sinais analógicos no ESP32 com Micropython:
-
-## ADC (Analog to Digital Converter)
-
-Para ter valores analógicos no ESP32 como **entrada**, nós precisamos utilizar o ADC para converter esse sinais analógicos em digitais a fim de que sejam interpretados pelo controlador. 
-
-Pode ser usado nos pinos 0, 2, 4, 12, 13, 14, 15, 25, 26, 27, 32, 33, 34, 35, 36, 39
-
-```python
-import machine
-
-# Criando um pin de entrada ADC no pino #12
-entrada = machine.ADC(machine.Pin(12))
-
-# Ler e printar o valor analógico do pino de entrada
-print(entrada.read())
-```
-
-## DAC (Digital to Analog Converter)
-
-Caso você queira ter valores analógicos como saída, é necessário utilizar o DAC. Ele converte os sinais digitais da placa em sinais analógicos na saída. 
-
-Só pode ser usado nas portas 25 e 26.
-
-```python
-import machine
-
-# Criando um pin de saída DAC no pino #25
-saida = machine.DAC(machine.Pin(25))
-
-# Mudar o valor de sinal do pino (entre 0 e 255)
-saida.write(150)
-```
-
-## PWM (Pulse Width Modulation)
-
-Outra forma é utilizar o PWM, que é uma forma de criar uma saída análoga artificial em um pino digital. Para fazer isso, o sinal do pino é mudado de 0 para 1 rapidamente, por isso, utiliza dois parâmetros: frequência e ciclo de trabalho. 
-
-Pode ser usado em qualquer saída analógica.
-
-Para utilizá-la, você precisa de dois valores como parâmetros:
-
-- **Frequência**: Pode ser um valor entre 0 e 78125. A frequência de 5000 Hz geralmente é a mais comum e pode ser usada para controlar o brilho de um LED.
-- **Ciclo de trabalho**: É um valor entre 0 e 1023, no qual 1023 corresponde a 100% do ciclo de trabalho (1 - ligado) e 0 corresponde a 0% do ciclo de trabalho (0 - desligado)
-
-```python
-import machine
-
-# Criando um pin de entrada PWM no pino #0
-# O primeiro parâmetro é o Pin, o segundo é a frequência e o terceiro é o ciclo de trabalho
-saida = machine.PWM(machine.Pin(0), freq=5000, duty_u16=32768)
-
-# Mudar o valor do ciclo de trabalho
-saida.duty(valor)
-```
+**🚌Camada de rede**
 
 <p  align="center">
-<img  src="https://exploreembedded.com/wiki/images/5/54/0_LPC1768_PWM.gif"  width="450"  />
+<img  src="camadarede.png"  width="450"  />
 </p>
+A camada de rede lida com o roteamento dos dados na rede. Ela define protocolos de roteamento que determinam a melhor rota para enviar os pacotes de dados de origem para o destino. Nessa camada, os pacotes são encapsulados em datagramas e endereçados através de endereços IP.
 
-:warning: **Atenção!** Alguns sensores podem precisar de outros pinos específicos ou uma programação específica. As implementações aqui são exemplos gerais :)
+Um endereço IP (Internet Protocol) é um identificador numérico único atribuído a cada dispositivo conectado a uma rede IP. Ele é usado para identificar e localizar dispositivos em uma rede, permitindo que eles se comuniquem entre si. Por exemplo, `192.168.0.1` é um endereço IPv4 comumente usado para roteadores domésticos.
 
-<br/>
+**Cama de transporte**
 
-# :round_pushpin: Em qual pino conectar no ESP 32?
+São regras que ditam como os pacotes da camada de transporte deverão ser codificados e como vão interagir e transportar dados entre si. Cada protocolo tem suas características que podem fazer com que sejam ou não adequados para cada situação diferente.
+	
+**TCP:**
+> O TCP é um protocolo confiável, pois implementa mecanismos de controle de fluxo para evitar congestionamentos durante a transmissão de dados. Além disso, ele retransmite datagramas que foram perdidos e garante que os pacotes sejam entregues ao destino na ordem correta. Em resumo, o TCP assegura que todos os dados enviados sejam recebidos corretamente pelo destinatário, é um protocolo seguro, porém mais lento e de maior complexidade na implementação.
 
-- Pinos nos quais é possível usar ADC: 0, 2, 4, 12, 13, 14, 15, 25, 26, 27, 32, 33, 34, 35, 36, 39
-- Pinos nos quais é possível usar DAC: 25 e 26
-- Pinos nos quais é possível usar PWN: Qualquer saída digital
+**UDP:**
+> Por outro lado, o UDP é um protocolo não confiável, pois não realiza nenhum tipo de controle adicional. Não há controle de fluxo para evitar congestionamentos, não são feitas retransmissões de segmentos perdidos, não ocorre a ordenação de pacotes desordenados e não há confirmação de entrega dos dados. Em outras palavras, o UDP não oferece garantia de entrega correta dos dados ao destinatário, porém prioriza a performance e é menos complexo.
 
-*P.S.: 34, 35, 36 e 39 apenas recebem entrada*
+**Camada de aplicação e Sockets**
 
-VCC e GND vocês conheceram na aula 1 :)
+A camada de aplicação é a camada responsável por oferecer serviços às aplicações/processos que estão rodando na máquina. Alguns dos seus protocolos mais usados são HTTP (e HTTPS), que é usado por navegadores e APIs web para comunicarem entre si, transportando arquivos HTML, CSS, Javascript e JSON, e o SMTP, que é o protocolo padrão de email.
 
-<p  align="center">
-<img  src="https://lastminuteengineers.b-cdn.net/wp-content/uploads/iot/ESP32-Pinout.png"  width="450"  />
-</p>
+Os sockets são responsáveis por fazer a ponte entre a camada de transporte e os programas que rodam na camada de aplicação. Por isso, para cada processo rodando no sistema, há um socket diferente, fazendo com que seja necessária uma forma de identificá-los; isso é feito por meio das portas.
 
 
-:warning: **Atenção!** Alguns pinos podem apresentar comportamento inesperado. 
-
-Os pinos verdes são seguros para uso. Os amarelos podem apresentar comportamento imprevisível e é recomendado evitar os vermelhos
-
-<p  align="center">
-<img  src="https://lastminuteengineers.b-cdn.net/wp-content/uploads/iot/ESP32-GPIO-Pins-that-are-Safe-to-Use.png"  width="300"  />
-</p>
-
-Para saber mais sobre, [veja aqui](https://lastminuteengineers.com/esp32-pinout-reference/) :)
-
-<br/>
-
-# :star_struck: Como usar novos sensores e atuadores?
-
-## 1. Como escolher e comprar um sensor/atuador específico?
-
-Em sites de compra de componentes eletrônicos, procure pela ação que você precisa que o componente tenha (por exemplo, sensor de iluminação ou LED azul). Existem vários componentes que podem fazer a mesma coisa, então leia sua descrição para ver qual se aplica melhor ao seu projeto. 
-
-Caso você tenha um sensor/atuador e não saiba qual é, em alguns casos, pode ter um nome escrito no componente.
-
-Alguns componentes podem ter uma versão **original**, que é apenas o sensor, ou versão com **módulo**, no qual há um pequeno circuito para facilitar ações como definir valores para funcionamento e conexão no seu circuito.
-
-Sugestões de sites de confiança:
-
-- [Baú da eletrônica](https://www.baudaeletronica.com.br/)
-- [Curto Circuito](https://curtocircuito.com.br/)
-
-## 2. Como saber as informações desse sensor/atuador? (O que ele faz, como montar o circuito, especificações...)
-
-Todo componente eletrônico, como sensores e atuadores, possuem um documento chamado **datasheet**. 
-
-O datasheet reune dados do componentes, tais como:
-
-- Nome e descrição da funcionalidade do componente
-- Circuitos padrões ou exemplos de aplicações
-- Valores máximos e mínimos de trabalho
-- Outras informações técnicas que podem ser úteis sobre o uso do componente  
-
-Geralmente, baste procurar o nome do componente + datasheet em um buscador ou no site do fabricante! Caso as informações estejam técnicas demais, aproveite para **visitar outros sites e ver exemplos de circuitos** e aplicações utilizando este componente :)
-
-Também é interessante olhar no **site de onde você comprou o componente**, já que, normalmente, deixam uma breve descrição (que é um resumo do datasheet!)
-
-## 3. Como programar esse sensor/atuador com MicroPython na ESP 32?
-
-Agora que você sabe qual componente tem em mão, como programá-lo? Usando a documentação!
-
-Caso tenha dúvidas sobre funções, módulos, protocolos e drivers do ESP32 com MicroPython, veja a [documentação do MicroPython para ESP32](https://docs.micropython.org/en/latest/esp32/quickref.html)  
-
-Caso não resolva seu problema, procure por guias onlines utilizando o mesmo sensor, vendo seu funcionamento e se é necessário módulos e protocolos diferentes também. [RandomNerdTutorials](https://randomnerdtutorials.com/projects-esp32-esp8266-micropython/) possuem guias de passo-a-passo de vários componentes no ESP32 com Micropython, mas fique à vontade para explorar outros :)
-
-<br/>
 
 # :woman_technologist: Mão na massa
 
-Explore os subdiretórios deste repositório para ver exemplos simples de circuitos e códigos para diferentes sensores e atuadores:
+Explore os subdiretórios deste repositório para ver exemplos de conexões e servidores:
 
-**Sensores**
-
-- [LDR (Luminosidade)](./LDR)
-- [DHT22 (Umidade do solo)](./DHT22)
-- [TTP223B (Toque)](./TTP223B/)
-- LM 35 (Temperatura)
-- [HC-SR501 (Presença)](./Pir_Hc-sr501)
-
-**Atuadores**
-
-- [Servomotor](./Servo_MotorSg90/)
-- [LED RGB](./LED_RGB)
-- [LED](./LED)
-- [Buzzer](./Buzzer)
-- Display OLED
+- [Digital Locker](https://github.com/JadnoABS/digitalLocker)
+- [Phishing Portal](https://github.com/SystemGuuh/Computacao-Fisica/tree/main/Phishing-ExplicaoESP)
+- [Alarm with whatsapp bot](https://github.com/SystemGuuh/Computacao-Fisica/tree/main/BabyAlarm)
 
 <br/>
 
 # :busts_in_silhouette: Contribuições
 
-Caso você use algum sensor/atuador que não está aqui, fique à vontade para enviar um [Pull Request](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) no repositório para complementá-lo!
+Caso você use algum outro método que não está aqui, fique à vontade para enviar um [Pull Request](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) no repositório para complementá-lo!
 
