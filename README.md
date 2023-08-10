@@ -13,7 +13,7 @@ Ao finalizar o curso, você:
 - Aprenderá princípios básicos de eletrônica 
 - Aprenderá princípios básicos de microcontroladores utilizando ESP32 com MicroPython
 - Desenvolverá um projeto para seu portfólio
-- Terá um leque de conteúdos suficiente para aprofundar seus estudos de forma anônima após o curso 
+- Terá um leque de conteúdos suficiente para aprofundar seus estudos de forma autônoma após o final do curso 
 
 
 # Conteúdo
@@ -21,7 +21,7 @@ Ao finalizar o curso, você:
 - [Aula 0 - Introdução ao curso e conteúdo extra](./0%20-%20Complementos)
 - [Aula 1 - Introdução à eletrônica e MicroPython](./1%20-%20Introdução%20ao%20MicroPython%20e%20Eletrônica)
 - [Aula 2 - Sensores e Atuadores](./2%20-%20Sensores%20e%20Atuadores/)
-- Aula 3 - Conexão e Servidores
+- [Aula 3 - Conexão e Servidores](./3%20-%20Conexões%20e%20Servidores/)
 - Aula 4 - Projetos
 
 
